@@ -1,0 +1,232 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+body {
+	font-family: "Noto Sans", "Noto Sans TC";
+}
+
+h1 {
+	font-family: inherit;
+	text-transform: none;
+	line-height: 6rem;
+}
+
+h3{font-family : inherit;}
+.bg-primary{background-color:#00CED1!important}
+hr.star-light:after{color:#fff;background-color:#00CED1}
+hr.star-dark:after{color:#2c3e50;background-color:#f1f1f1}
+.subheading {
+	font-family: inherit;
+	text-transform: none;
+	margin-top: 1rem;
+}
+.timeline {
+	position: relative;
+	margin: 0 auto 20px;
+}
+
+.timeline::after {
+	content: '';
+	position: absolute;
+	width: 6px;
+	background-color: #ffffff;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	margin-left: -3px;
+}
+
+
+
+.timeline-block {
+	padding:10px 40px;
+	position: relative;
+	background-color: inherit;
+	width: 50%;
+}
+/* The circles on the timeline */
+.timeline-block::after{
+	content: '';
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	right: -12px;
+	background-color: white;
+	border:4px solid #00CED1;
+	top: 15px;
+	border-radius: 50%;
+	z-index: 1;
+}
+/* Place the container to the right */
+.timeline-left{
+	left: 0;
+}
+/*Place the container to the right */
+.timeline-right {
+	left: 50%;
+}
+/*Fix the circle for containers on the right side */
+.timeline-right::after{
+	left: -12px;
+}
+/* Media queries - Responsive timeline on screens less than 992px wide */
+@media screen and (max-width: 992px) {
+	/* Place the timeline to the left */
+	.timeline::after {
+		left:31px;
+	}
+}
+/* Media queries - Responsive timeline on screens less than 992px wide */
+@media screen and (max-width: 992px) {
+	/*Place the timeline to the left */
+	.timeline::after{
+		left: 31px;
+	}
+	
+	/* Full-width containers */
+	.timeline-block{
+		width: 100%;
+		padding-left: 70px;
+		padding-right: 25px;
+	}
+	
+	/* Make all right containers behave like the left ones */
+	.timeline-right {
+		left: 0%;
+	}
+}
+/* Media queries - Responsive timeline on screens less than 992px wide */
+@media screen and (max-width: 992px) {
+	/* Place the timeline to the left */
+	.timeline::after {
+		left:31px;
+	}
+
+/* Full-width containers */
+	.timeline-block{
+		width: 100%;
+		padding-left: 70px;
+		padding-right: 25px;
+	}
+	/* Make all right containers behave like the left ones */
+	.timeline-right {
+		left: 0%;
+	}
+	/* Make sure all circles are at the same spot */
+	.timeline-left::after, .timeline-right::after{
+		left:17px;
+	}
+}
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: #f1f1f1;
+    padding: 0px;
+    font-family: ;
+}
+
+/* Center website */
+.main {
+    max-width: 1000px;
+    margin: auto;
+}
+
+
+
+.row {
+    margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column (if you want) */
+.row,
+.row > .column {
+    padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 25%;
+}
+
+/* Clear floats after rows */ 
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Content */
+.content {
+    background-color: white;
+    padding: 10px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+    .column {
+        width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+.portfolio-box {
+  position: relative;
+  display: block;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.portfolio-box .portfolio-box-caption {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  opacity: 0;
+  color: #fff;
+  background: rgba(240, 95, 64, 0.9);
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+  padding: 0 15px;
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+  font-size: 18px;
+}
+
+.portfolio-box:hover .portfolio-box-caption {
+  opacity: 1;
+}
+
+.portfolio-box:focus {
+  outline: none;
+}
